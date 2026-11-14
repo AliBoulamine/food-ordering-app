@@ -12,3 +12,9 @@ function handleLogin(event) {
         alert("Invalid credentials. Please try again.");
     }
 }
+
+// Fonction pour gérer la déconnexion
+function handleLogout() {
+    // Redirige vers la page de connexion
+    window.location.href = "index.html";
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks Point - Menu</title>
+    <!-- Intégration de Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans h-screen flex overflow-hidden">
+
+    <!-- Top Banner & Logout (Absolu en haut) -->
+    <div class="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-2 text-orange-500 font-bold z-10 bg-gray-50">
+        <span>2 client hit for this app!</span>
+        <button onclick="handleLogout()" class="border border-gray-400 px-4 py-1 rounded text-gray-600 hover:bg-gray-100">logout</button>
+    </div>
+
+    <!-- 1. Left Sidebar: Navigation -->
+    <aside class="w-1/5 bg-gray-50 h-full flex flex-col px-8 pt-16 border-r border-gray-200">
+        <div class="mb-10">
+            <h1 class="text-4xl font-extrabold italic tracking-tighter">Snacks<br><span class="text-2xl text-gray-700">Point</span></h1>
+        </div>
+        <nav class="flex flex-col space-y-6 text-lg text-gray-600">
+            <a href="#" class="hover:text-black">About</a>
+            <a href="#" class="hover:text-black">Services</a>
+            <a href="#" class="hover:text-black">Your Orders</a>
+            <a href="#" class="hover:text-black">Wishlists</a>
+            <a href="#" class="hover:text-black">Cart</a>
+            <a href="#" class="hover:text-black mt-8">Contact</a>
+            <a href="#" class="hover:text-black">Checkout</a>
+        </nav>
+    </aside>
+
+    <!-- 2. Main Content: Menu Items -->
+    <main class="flex-1 h-full flex flex-col pt-16 px-10 overflow-y-auto bg-white">
+        <!-- Top Action Bar -->
+        <div class="flex space-x-6 mb-8 text-sm">
+            <button class="border border-pink-300 text-pink-600 rounded-full px-6 py-2 flex items-center gap-2 hover:bg-pink-50">🔍 Search</button>
+            <button class="border border-pink-300 text-pink-600 rounded-full px-6 py-2 flex items-center gap-2 hover:bg-pink-50">🏷️ Offers</button>
+            <button class="border border-pink-300 text-pink-600 rounded-full px-6 py-2 flex items-center gap-2 hover:bg-pink-50">🛒 0 Items</button>
+            <button class="border border-pink-300 text-pink-600 rounded-full px-6 py-2 flex items-center gap-2 hover:bg-pink-50 ml-auto">📍 Address</button>
+        </div>
+
+        <h2 class="text-4xl font-bold text-orange-400 mb-6">Burger</h2>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-2 gap-8">
+            <!-- Product Card 1 -->
+            <div class="bg-pink-100 rounded-xl p-4 relative shadow-sm hover:shadow-md transition">
+                <span class="absolute top-4 left-4 bg-black text-white text-xs font-bold px-2 py-1 rounded-md flex items-center gap-1">★ 4.3</span>
+                <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-sm text-gray-400 hover:text-red-500">♡</button>
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop" alt="Cheese Burger" class="w-48 h-48 object-cover rounded-full mx-auto my-4 shadow-lg border-4 border-white">
+                <h3 class="text-lg font-bold text-gray-800">Cheese Burger</h3>
+                <p class="text-gray-700 font-semibold mt-1">Price : $ 13</p>
+            </div>
+            
+            <!-- Product Card 2 -->
+            <div class="bg-pink-100 rounded-xl p-4 relative shadow-sm hover:shadow-md transition">
+                <span class="absolute top-4 left-4 bg-black text-white text-xs font-bold px-2 py-1 rounded-md flex items-center gap-1">★ 4.3</span>
+                <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-sm text-gray-400 hover:text-red-500">♡</button>
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop" alt="Elk Burger" class="w-48 h-48 object-cover rounded-full mx-auto my-4 shadow-lg border-4 border-white">
+                <h3 class="text-lg font-bold text-gray-800">Elk Burger</h3>
+                <p class="text-gray-700 font-semibold mt-1">Price : $ 15</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. Right Sidebar: Categories -->
+    <aside class="w-1/4 bg-gray-50 h-full flex flex-col px-8 pt-24 border-l border-gray-200">
+        <h2 class="text-2xl font-bold text-orange-400 mb-6 border-b-2 border-orange-200 pb-2 inline-block">Go For Hunt</h2>
+        <ul class="space-y-6">
+            <li class="flex items-center gap-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"><span class="text-2xl">🍔</span> <span class="text-lg text-gray-700">Burger</span></li>
+            <li class="flex items-center gap-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"><span class="text-2xl">🌯</span> <span class="text-lg text-gray-700">Burrito</span></li>
+            <li class="flex items-center gap-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"><span class="text-2xl">🍰</span> <span class="text-lg text-gray-700">Desserts</span></li>
+            <li class="flex items-center gap-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"><span class="text-2xl">🍩</span> <span class="text-lg text-gray-700">Donuts</span></li>
+            <li class="flex items-center gap-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"><span class="text-2xl">🍕</span> <span class="text-lg text-gray-700">Pizza</span></li>
+        </ul>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
